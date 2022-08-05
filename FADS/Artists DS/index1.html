@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <style>
+        button {
+            display: inline-block;
+            background-color: grey;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            padding: 5px;
+            width: 80px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 1px;
+        }
+
+        button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -200px;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color:#0A2E66 ;
+        }
+
+        button:hover span {
+            padding-right: 25px;
+        }
+
+        button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .tar {
+            left : 100px;
+        }
+
+
+        #exportPDF {
+            display: inline-block;
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: black;
+            text-align: center;
+            font-size: 12px;
+            padding: 1px;
+            width: 80px;
+            height: 20px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 1px;
+        }
+    
+        #exportPDF span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+    
+        #exportPDF span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -2000px;
+            transition: 0.5s;
+        }
+    
+        #exportPDF:hover {
+            background-color: lightslategray;
+        }
+    
+        #exportPDF:hover span {
+            padding-right: 25px;
+        }
+    
+        #exportPDF:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        #exportImage {
+            display: inline-block;
+            background-color:white;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: black;
+            text-align: center;
+            font-size: 12px;
+            padding: 1px;
+            width: 90px;
+            height: 20px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 1px;
+        }
+    
+        #exportImage span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+    
+        #exportImage span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -2000px;
+            transition: 0.5s;
+        }
+    
+        #exportImage:hover {
+            background-color: lightslategray;
+        }
+    
+        #exportImage:hover span {
+            padding-right: 25px;
+        }
+    
+        #exportImage:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        #AEIlab {
+            display: inline-block;
+            background-color:white;
+            border-radius: 10px;
+            border: 1px solid black;
+            color: black;
+            text-align: center;
+            font-size: 12px;
+            padding: 1px;
+            width: 100px;
+            height: 20px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 1px;
+        }
+    
+        #AEIlab span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+    
+        #AEIlab span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -2000px;
+            transition: 0.5s;
+        }
+    
+        #AEIlab:hover {
+            background-color: lightslategray;
+        }
+    
+        #AEIlab:hover span {
+            padding-right: 25px;
+        }
+    
+        #AEIlab:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="background-color:#990000; height: 100px; width: 1440px; position: relative; top: -22px; left: -8px; text-align: center;padding-top: 20px; color: white;">
+        <h1> Artists Data Visualization Dashboard</h1>
+    </div>
+    <div style="display: flex; justify-content:flex-end">
+        <button id="exportPDF">Import PDF</button>
+        <button id="exportImage">Import Image</button>
+        <button id="AEIlab" onclick="location.href='https://oneill.iupui.edu/research/aei-lab/index.html';">What is AEI lab?</button>
+        <button id="exportPDF" <p><a href="mailto:ccaoneil@indiana.edu">Contact us</a></p> </button>
+    </div>
+    <div class="tar">
+        <button onclick="location.href='http://127.0.0.1:5500/index.html';">Sankey</button>
+        <button id="btn" onclick="location.href='http://127.0.0.1:5500/index1.html';">Education</button>
+        <button id="btn" onclick="location.href='http://127.0.0.1:5500/index2.html';">Computation</button>
+    </div>
+    
+    <div id="vizContainer"></div>
+
+    <script src="./App1.js"></script>
+</body>
+
+</html>
